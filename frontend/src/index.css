@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f1a14;
+  --bg-card: #162018;
+  --bg-surface: #1c2a1f;
+  --border: #2a3d2e;
+  --text: #e8f0e9;
+  --text-muted: #7a9c80;
+  --accent: #4cc24c;
+  --accent-dim: #2aa52a;
+  --danger: #f87171;
+  --warning: #fbbf24;
+  --info: #60a5fa;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  /* Prevent font size adjustment on orientation change (iOS) */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  /* Prevent horizontal overflow on mobile */
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar (desktop only) */
+@media (pointer: fine) {
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+}
+
+/* Transitions */
+*, *::before, *::after {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: 120ms;
+}
+
+/* Improve tap targets on mobile */
+button, a, input[type="checkbox"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border bg-[var(--bg-card)] border-[var(--border)] p-4 sm:p-5;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+           transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed
+           min-h-[36px];
+  }
+  .btn-primary {
+    @apply btn bg-forest-600 hover:bg-forest-500 active:bg-forest-700 text-white;
+  }
+  .btn-secondary {
+    @apply btn border border-[var(--border)] hover:bg-[var(--bg-surface)]
+           text-[var(--text-muted)] hover:text-[var(--text)];
+  }
+  .btn-ghost {
+    @apply btn border border-[var(--border)] hover:bg-[var(--bg-surface)] text-[var(--text-muted)] hover:text-[var(--text)];
+  }
+  .btn-danger {
+    @apply btn bg-red-900/40 hover:bg-red-900/70 text-red-300 border border-red-900;
+  }
+  .input {
+    @apply w-full rounded-lg border border-[var(--border)] bg-[var(--bg-surface)]
+           px-3 py-2.5 text-sm text-[var(--text)] placeholder-[var(--text-muted)]
+           focus:outline-none focus:ring-1 focus:ring-forest-500
+           min-h-[42px];
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium;
+  }
+}

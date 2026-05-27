@@ -1,0 +1,18 @@
+Account Number,Meter ID,Service Address,Billing Period Start,Billing Period End,Usage (kWh),Peak Demand (kW),Rate Schedule,Cost (USD),Currency,Meter Type
+ACC-001,MTR-HH-001,Hamburg Plant Building A,2024-01-01,2024-01-31,125430,285.5,Industrial TOU,12543.00,USD,Electricity
+ACC-001,MTR-HH-002,Hamburg Plant Building B,2024-01-01,2024-01-31,89200,195.0,Industrial TOU,8920.00,USD,Electricity
+ACC-002,MTR-BE-001,Berlin Office,2024-01-01,2024-01-31,45230,125.5,Commercial TOU,4523.00,USD,Electricity
+ACC-003,MTR-MU-001,Munich Plant Main Hall,2024-01-01,2024-01-31,287500,620.0,Industrial TOU,28750.00,USD,Electricity
+ACC-004,MTR-HH-003,Hamburg Plant Warehouse,2024-01-01,2024-01-31,23450,,Warehouse Basic,2345.00,USD,Electricity
+ACC-001,MTR-HH-001,Hamburg Plant Building A,2024-02-01,2024-02-29,118900,270.0,Industrial TOU,11890.00,USD,Electricity
+ACC-001,MTR-HH-002,Hamburg Plant Building B,2024-02-01,2024-02-29,84300,185.5,Industrial TOU,8430.00,USD,Electricity
+ACC-002,MTR-BE-001,Berlin Office,2024-02-01,2024-02-29,43100,122.0,Commercial TOU,4310.00,USD,Electricity
+ACC-003,MTR-MU-001,Munich Plant Main Hall,2024-02-01,2024-02-29,295000,635.0,Industrial TOU,29500.00,USD,Electricity
+ACC-004,MTR-HH-003,Hamburg Plant Warehouse,2024-02-01,2024-02-29,22100,,Warehouse Basic,2210.00,USD,Electricity
+ACC-001,MTR-HH-001,Hamburg Plant Building A,2024-03-01,2024-03-31,131200,295.0,Industrial TOU,13120.00,USD,Electricity
+ACC-003,MTR-MU-001,Munich Plant Main Hall,2024-03-01,2024-03-31,312000,670.0,Industrial TOU,31200.00,USD,Electricity
+ACC-005,MTR-MU-002,Munich Plant Compressor Room,2024-02-15,2024-03-14,58400,140.0,Industrial TOU,5840.00,USD,Electricity
+ACC-002,MTR-BE-001,Berlin Office,2024-03-01,2024-03-31,41800,119.0,Commercial TOU,4180.00,USD,Electricity
+ACC-006,MTR-HH-004,Hamburg Data Center,2024-01-01,2024-01-31,95200,210.0,Data Center Rate,19040.00,USD,Electricity
+ACC-006,MTR-HH-004,Hamburg Data Center,2024-02-01,2024-02-29,96800,215.0,Data Center Rate,19360.00,USD,Electricity
+ACC-007,MTR-BE-002,Berlin Test Lab,2024-01-01,2024-01-31,-500,50.0,Commercial TOU,0.00,USD,Electricity
