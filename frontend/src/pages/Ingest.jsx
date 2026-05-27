@@ -191,7 +191,7 @@ export default function Ingest() {
     queryFn: () => getJobs(),
     refetchInterval: 5000,
   })
-  const jobs = jobsData?.data?.results || jobsData?.data || []
+ const jobs = jobsData?.data?.results || (Array.isArray(jobsData?.data) ? jobsData?.data : [])
 
   return (
     <div className="p-4 sm:p-6 lg:p-8 space-y-6 sm:space-y-8 max-w-6xl mx-auto">
