@@ -118,15 +118,16 @@ SIMPLE_JWT = {
 }
 
 # CORS: allow the React dev server and production origin
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://localhost:3000',
-]
-cors_extra = os.environ.get('CORS_ALLOWED_ORIGINS', '')
-if cors_extra:
-    CORS_ALLOWED_ORIGINS += [o.strip() for o in cors_extra.split(',') if o.strip()]
-
+# CORS
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+
+# CSRF
+CSRF_TRUSTED_ORIGINS = [
+    'https://breathe-esg-kappa-eight.vercel.app',
+    'https://*.vercel.app',
+    'https://*.onrender.com',
+]
 
 # Max upload size: 10 MB
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024
