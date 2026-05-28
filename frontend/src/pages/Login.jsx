@@ -70,9 +70,6 @@ export default function Login() {
           </button>
         </div>
 
-        <p className="text-center text-xs text-[var(--text-muted)] mt-4">
-          Default: <code className="font-mono text-forest-400">analyst / analyst123</code>
-        </p>
       </div>
     </div>
   )
